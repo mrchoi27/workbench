@@ -1,0 +1,19 @@
+* Create disks
+. qemu-img create -f qcow2 system.qcow 40G
+. qemu-img create -f qcow2 ssd.qcow 10G
+. qemu-img create -f qcow2 nvme.qcow 10G
+
+* Install text-only Ubuntu
+
+- install minimal
+
+- remove gui environment
+. sudo apt remove -purge ubuntu-desktop
+. sudo apt autoremove
+
+- remove graphic server(X11)
+. sudo apt remove -purge xorg
+
+- install packages
+. sudo apt install vim curl git hdparm nvme-cli
+
