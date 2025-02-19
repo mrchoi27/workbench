@@ -1,0 +1,15 @@
+
+/dev/sda:
+DCO Checksum verified.
+DCO Revision: 0x0002
+The following features can be selectively disabled via DCO:
+	Transfer modes:
+		 mdma0 mdma1 mdma2
+		 udma0 udma1 udma2 udma3 udma4 udma5 udma6
+	Real max sectors: 1953525168
+	ATA command/feature sets:
+		 SMART self_test error_log security PUIS HPA 48_bit
+		 streaming FUA selective_test
+		 WRITE_UNC_EXT
+	SATA command/feature sets:
+		 NCQ NZ_buffer_offsets interface_power_management SSP

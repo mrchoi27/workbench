@@ -1,0 +1,49 @@
+Package: nvme-cli
+Architecture: amd64
+Version: 1.9-1ubuntu0.1
+Priority: optional
+Section: admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Breno Leitao <leitao@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 671
+Depends: libc6 (>= 2.14), libuuid1 (>= 2.16), uuid-runtime
+Filename: pool/main/n/nvme-cli/nvme-cli_1.9-1ubuntu0.1_amd64.deb
+Size: 283116
+MD5sum: 98b3b88d1b0188275b8a5bee34657667
+SHA1: bfb6c1858295af3823310899f43ee7422e5aa337
+SHA256: 0e697c64eed8d4377497ead82e77072a542ba2b80ce966c3e2c73e29aba2bf24
+SHA512: d828b17e43b608ac70f4ce303624ff66694df69088b569f02f78314dffbd95af29c3e0d2d8653ccd7c6b0b2a1e56fed8a5bb9cedeeb1752139dbc1f16475b5d8
+Homepage: https://github.com/linux-nvme/nvme-cli
+Description-en: userspace tooling to control NVMe drives
+ NVMe is a fast, scalable, direct attached storage interface, accessing
+ solid state drives through PCIe.
+ .
+ The nvme CLI contains core management tools with minimal dependencies.
+Description-md5: 50cd6c8d88aeb616570db136de8ec92d
+
+Package: nvme-cli
+Architecture: amd64
+Version: 1.9-1
+Priority: optional
+Section: universe/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Breno Leitao <leitao@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 668
+Depends: libc6 (>= 2.14)
+Filename: pool/universe/n/nvme-cli/nvme-cli_1.9-1_amd64.deb
+Size: 282488
+MD5sum: f492049c12191395fb18060b5bd18364
+SHA1: adb6ef9c0e44b6fbc38c5e5102dacdef27ac63d1
+SHA256: 604728ed99235d1d13342325147fd4a86cd629f6c345815aed82b13f2f6fa03d
+Homepage: https://github.com/linux-nvme/nvme-cli
+Description-en: userspace tooling to control NVMe drives
+ NVMe is a fast, scalable, direct attached storage interface, accessing
+ solid state drives through PCIe.
+ .
+ The nvme CLI contains core management tools with minimal dependencies.
+Description-md5: 50cd6c8d88aeb616570db136de8ec92d
+

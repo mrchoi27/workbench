@@ -1,0 +1,9 @@
+
+/dev/sdb:
+DCO Checksum verified.
+DCO Revision: 0x0000 -- unknown, treating as 0002
+The following features can be selectively disabled via DCO:
+	Transfer modes:
+		
+	Real max sectors: 1
+	ATA command/feature sets:

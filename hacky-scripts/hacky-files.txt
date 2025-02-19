@@ -1,0 +1,17 @@
+total 50793348
+-rw-r--r-- 1 mrchoi mrchoi        3413 Nov 18 18:40 0001-Blog-example-new-commands.txt
+-rw-r--r-- 1 mrchoi mrchoi          87 Jan  2 17:13 build-and-run.txt
+-rw-r--r-- 1 mrchoi mrchoi 16617373696 Nov 18 18:02 disk-241118.qcow
+-rw-r--r-- 1 mrchoi mrchoi      196928 Nov 18 14:44 disk-empty.qcow
+-rw-r--r-- 1 mrchoi mrchoi  5604245504 Nov 19 10:40 disk-svr-241119.qcow
+-rw-r--r-- 1 mrchoi mrchoi  5618532352 Jan  2 17:21 disk-svr.qcow
+-rw-r--r-- 1 mrchoi mrchoi 16646340608 Jan  2 17:21 disk.qcow
+-rw-r--r-- 1 mrchoi mrchoi   624771072 Nov 18 14:40 install-amd64-minimal-20241117T163407Z.iso
+-rw-r--r-- 1 mrchoi mrchoi      196624 Nov 18 13:32 nvm.qcow
+-rwxr-xr-x 1 mrchoi mrchoi         181 Nov 18 18:27 run-gui.sh
+-rwxr-xr-x 1 mrchoi mrchoi         356 Nov 19 11:12 run-svr.sh
+-rwxr-xr-x 1 mrchoi mrchoi         198 Nov 18 18:05 run-txt.sh
+-rwxr-xr-x 1 mrchoi mrchoi         188 Nov 18 14:21 run.sh
+-rw-r--r-- 1 mrchoi mrchoi      196624 Nov 19 08:11 sata.qcow
+-rw-r--r-- 1 mrchoi mrchoi  4762707968 Nov 18 14:22 ubuntu-22.04.5-desktop-amd64.iso
+-rw-r--r-- 1 mrchoi mrchoi  2136926208 Nov 18 14:22 ubuntu-22.04.5-live-server-amd64.iso
