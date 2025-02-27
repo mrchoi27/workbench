@@ -6,11 +6,14 @@ QEMU=$QEMU_PATH/qemu-system-x86_64
 
 if [[ $(uname -a) == *""microsoft* ]] ; then
     echo "WSL!!!"
+else
+    echo "NO WSL!!!"
+    : ${OPTIONS:="-cpu host -enable-kvm"}
 fi
 
 # sudo $QEMU -cpu host -enable-kvm -smp $(nproc) -m 8G \
 
-sudo $QEMU -smp $(nproc) -m 8G \
+sudo $QEMU $OPTIONS -smp $(nproc) -m 8G \
     -drive file=system.qcow,format=qcow2,if=none,id=boot \
     -device ahci,id=ahci \
     -device ide-hd,drive=boot,bus=ahci.0 \
