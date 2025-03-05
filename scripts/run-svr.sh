@@ -21,3 +21,5 @@ sudo $QEMU $OPTIONS -smp $(nproc) -m 8G \
     -device ide-hd,drive=sata,bus=ahci.1 \
     -drive file=nvme.raw,format=raw,if=none,id=nvm \
     -device nvme,serial=deadbeef,drive=nvm
+
+# Let's get it!
