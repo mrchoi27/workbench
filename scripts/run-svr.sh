@@ -15,37 +15,41 @@ usage() {
     exit 1
 }
 
-if [[ $# > 1 ]] ; then
-    usage
-fi
-
-if [[ $# == 0 ]] ; then
-    QEMU_PATH=$HACKY_QEMU_PATH
-elif [[ $# == 1 && $1 == "-s" ]] ; then
-    QEMU_PATH=$SYSTEM_QEMU_PATH
-else
-    usage
-fi
+QEMU_PATH=$HACKY_QEMU_PATH
+while getopts "s" opt; do
+    case $opt in
+        s)
+            QEMU_PATH=$SYSTEM_QEMU_PATH
+            ;;
+        \?)
+            usage
+            ;;
+    esac
+done
 
 QEMU=$QEMU_PATH/qemu-system-x86_64
 
 if [[ $(uname -a) == *""microsoft* ]] ; then
-    echo "WSL!!!"
-    OPTIONS=""
+    echo "[+] Environment = WSL!!!"
+    OPTIONS="-cpu host"
+    CORES=$(nproc)
+elif [[ $(uname -a) == *"Darwin"* ]] ; then
+    echo "[+] Environment = macOS!!!"
+    OPTIONS="-cpu Westmere"
+    CORES=$(sysctl -n hw.ncpu)
 else
-    echo "NO WSL!!!"
+    echo "[+] Environment = Native!!!"
     OPTIONS="-cpu host -enable-kvm"
+    CORES=$(nproc)
 fi
 
-# sudo $QEMU -cpu host -enable-kvm -smp $(nproc) -m 8G \
-
-sudo $QEMU $OPTIONS -smp $(nproc) -m 8G \
-    -drive file=system.qcow,format=qcow2,if=none,id=boot \
+$QEMU $OPTIONS -smp $CORES -m 8G \
+    -drive file=system.qcow2,format=qcow2,if=none,id=boot \
     -device ahci,id=ahci \
     -device ide-hd,drive=boot,bus=ahci.0 \
     -drive file=sata.raw,format=raw,if=none,id=sata \
-    -device ide-hd,serial=00SATA00,drive=sata,bus=ahci.1 \
+    -device ide-hd,serial=-=SATA=-,drive=sata,bus=ahci.1 \
     -drive file=nvme.raw,format=raw,if=none,id=nvm \
-    -device nvme,serial=00NAVMe00,drive=nvm
-
-# Let's get it!
+    -device nvme,serial=-=NAVMe=-,drive=nvm \
+    -netdev user,id=usernet,hostfwd=tcp::22-:22 \
+    -device e1000,netdev=usernet
